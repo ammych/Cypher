@@ -1,0 +1,21 @@
+<div id="mobilestickyheader">
+    <div class="mobile-header__body">
+        <button class="mobile-header__menu-button" type="button" (click)="menu.open()">
+            <i class="fa fa-bars"></i>
+        </button>
+        <a class="mobile-header__logo" routerLink="/">
+            <app-mobile-logo></app-mobile-logo>
+        </a>
+        
+        <div class="mobile-header__indicators">
+            
+            <div class="mobile-indicator">
+                <a routerLink="/shop/cart" class="mobile-indicator__button">
+                    <span class="mobile-indicator__icon">
+                        <i class="fa fa-shopping-bag"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
