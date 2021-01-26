@@ -14,7 +14,6 @@ export interface RootComponentData {
 @Component({
     selector: 'app-root',
     templateUrl: './root.component.html',
-    styleUrls: ['./root.component.scss'],
 })
 export class RootComponent implements OnInit, OnDestroy {
     destroy$: Subject<void> =  new Subject<void>();
