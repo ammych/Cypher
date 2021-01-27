@@ -14,7 +14,6 @@ export interface HomeComponentData {
 @Component({
     selector: 'app-root',
     templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit, OnDestroy {
     destroy$: Subject<void> =  new Subject<void>();
