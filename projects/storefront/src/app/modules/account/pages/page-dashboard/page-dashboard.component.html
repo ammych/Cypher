@@ -1,75 +1,219 @@
 <div class="dashboard" *ngIf="account.user">
-    <div class="dashboard__profile card profile-card">
-        <div class="card-body profile-card__body">
-            <div class="profile-card__avatar">
-                <img [src]="account.user.avatar" alt="">
-            </div>
-            <div class="profile-card__name">{{ account.user.firstName }} {{ account.user.lastName }}</div>
-            <div class="profile-card__email">{{ account.user.email }}</div>
-            <div class="profile-card__edit">
-                <a routerLink="/account/profile" class="btn btn-secondary btn-sm">
-                    {{ 'BUTTON_EDIT_PROFILE'|translate }}
-                </a>
-            </div>
-        </div>
-    </div>
 
-    <div *ngIf="!address" class="dashboard__address card">
-        <div class="card-body d-flex justify-content-center align-items-center">
-            <div class="text-center w-75">
-                <p>{{ 'TEXT_CALL_ADD_ADDRESS'|translate }}</p>
+	<div class="dashboardheader">
+		<div class="dashboard-heading">Dashboard</div>
+		<div class="profile-card__name">{{ account.user.firstName }} {{ account.user.lastName }}</div>
+	</div>
+	<ul class="dashboardlinks">
+		<li><a routerLink="/account/dashboard" class="active"><i class="fa fa-plus"></i>{{ 'TEXT_ADD_NEW'|translate }}</a></li>
+		<li><a routerLink="/account/active">{{ 'TEXT_ACTIVE'|translate }}</a></li>
+		<li><a routerLink="/account/history">{{ 'TEXT_HISTORY'|translate }}</a></li>
+		<li><a routerLink="/account/mostwanted">{{ 'TEXT_MOSTWANTED'|translate }}</a></li>
+		<li><a routerLink="/account/settings">{{ 'TEXT_SETTINGS'|translate }}</a></li>
+	</ul>
+	
+	
+	<div class="addproductsection">
+	<div class="row">
+		<div class="col-md-6">
+			<ng-container [formGroup]="form">
+				<div class="form-row">
+					<div class="form-group col-md-12">
+						<label for="{{ formId }}-sku">{{ 'INPUT_SKU_LABEL'|translate }}</label>
+						<input
+							type="text"
+							class="form-control"
+							id="{{ formId }}-sku"
+							formControlName="sku"
+							[class.is-invalid]="form.controls.sku|isInvalid"
+							[placeholder]="'INPUT_SKU_PLACEHOLDER'|translate"
+						>
+						<div class="invalid-feedback">
+							<div *ngIf="form.controls.sku|hasError:'required'">
+								{{ 'ERROR_FORM_REQUIRED'|translate }}
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-md-12">
+						<label for="{{ formId }}-sneaker-name">{{ 'INPUT_SNEAKER_NAME_LABEL'|translate }}</label>
+						<input
+							type="text"
+							class="form-control"
+							id="{{ formId }}-sneaker-name"
+							formControlName="sneakerName"
+							[class.is-invalid]="form.controls.sneakerName|isInvalid"
+						>
+						<div class="invalid-feedback">
+							<div *ngIf="form.controls.sneakerName|hasError:'required'">
+								{{ 'ERROR_FORM_REQUIRED'|translate }}
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-md-12">
+						<label for="{{ formId }}-brand">{{ 'INPUT_BRAND_LABEL'|translate }}</label>
+						<input
+							type="text"
+							class="form-control"
+							id="{{ formId }}-brand"
+							formControlName="brand"
+							[class.is-invalid]="form.controls.brand|isInvalid"
+						>
+						<div class="invalid-feedback">
+							<div *ngIf="form.controls.brand|hasError:'required'">
+								{{ 'ERROR_FORM_REQUIRED'|translate }}
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-md-12">
+						<label for="{{ formId }}-colorway">{{ 'INPUT_COLORWAY_LABEL'|translate }}</label>
+						<input
+							type="text"
+							class="form-control"
+							id="{{ formId }}-colorway"
+							formControlName="colorway"
+							[class.is-invalid]="form.controls.colorway|isInvalid"
+						>
+						<div class="invalid-feedback">
+							<div *ngIf="form.controls.colorway|hasError:'required'">
+								{{ 'ERROR_FORM_REQUIRED'|translate }}
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-md-12">
+						<label for="{{ formId }}-size">{{ 'INPUT_SIZE_LABEL'|translate }}</label>
+						<input
+							type="text"
+							class="form-control"
+							id="{{ formId }}-size"
+							formControlName="size"
+							[class.is-invalid]="form.controls.size|isInvalid"
+						>
+						<div class="invalid-feedback">
+							<div *ngIf="form.controls.size|hasError:'required'">
+								{{ 'ERROR_FORM_REQUIRED'|translate }}
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-md-12">
+						<label for="{{ formId }}-boxcondition">{{ 'INPUT_BOX_CONDITION_LABEL'|translate }}</label>
+						<select
+							id="{{ formId }}-boxcondition"
+							class="form-control"
+							formControlName="boxcondition"
+							[class.is-invalid]="form.controls.boxcondition|isInvalid"
+						>
+							<option value="">{{ 'INPUT_BOX_CONDITION_PLACEHOLDER'|translate }}</option>
+							<option value="New">New</option>
+							<option value="Used">Used</option>
+						</select>
+						<div class="invalid-feedback">
+							<div *ngIf="form.controls.boxcondition|hasError:'required'">
+								{{ 'ERROR_FORM_REQUIRED'|translate }}
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-md-12">
+						<label for="{{ formId }}-images">{{ 'INPUT_IMAGE_LABEL'|translate }}</label>
+						<span class="text-small">{{ 'TEXT_IMAGE_OPTIONAL'|translate }}</span>
+						
+						<div class="invalid-feedback">
+							<div *ngIf="form.controls.images|hasError:'required'">
+								{{ 'ERROR_FORM_REQUIRED'|translate }}
+							</div>
+						</div>
+					</div>
+					<div class="form-group col-md-12">
+						<label for="{{ formId }}-price">{{ 'INPUT_PRICE_LABEL'|translate }}</label>
+						<span class="text-small">{{ 'TEXT_PRICE_OPTIONAL'|translate }}</span>
+						
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text">INR</span>
+							</div>
+							<input
+								type="text"
+								class="form-control"
+								id="{{ formId }}-price"
+								formControlName="price"
+								[class.is-invalid]="form.controls.price|isInvalid"
+							>
+						</div>
+						<div class="invalid-feedback">
+							<div *ngIf="form.controls.price|hasError:'required'">
+								{{ 'ERROR_FORM_REQUIRED'|translate }}
+							</div>
+						</div>
+						<div class="pricesbox">
+							<table>
+								<tr>
+									<td>List Price</td>
+									<td>₹-26</td>
+								</tr>
+								<tr>
+									<td>Transaction Fee (10%)</td>
+									<td>₹-2.6</td>
+								</tr>
+								<tr>
+									<td>Service Tax (1.8%)</td>
+									<td>₹-0.47</td>
+								</tr>
+								<tr>
+									<td>Shipping</td>
+									<td>₹120</td>
+								</tr>
+								<tr>
+									<td>Authentication Fee</td>
+									<td>waived</td>
+								</tr>
+								<tr>
+									<td>You will recieve</td>
+									<td>₹0</td>
+								</tr>
+							</table>
+						</div>
+						
+					</div>
+					<div class="form-group mb-0 pt-3">
+						<button
+							class="btn btn-primary"
+							[class.btn-loading]="saveInProgress"
+							(click)="save()"
+						>{{ 'BUTTON_CONFIRM'|translate }}</button>
+					</div>
+					
+				</div>
+			</ng-container>
+		</div>
+		<div class="col-md-6">
+		
+			<div class="row">
+				<div class="col-md-6">
+					<div class="addproductimage"><img src="assets/images/products/product-1-1.png"></div>
+				</div>
+				<div class="col-md-6">
+					<div class="addproductdetailbox">
+						<div class="productname">Adidas Yeezy Boost 350 V2 Desert Sage</div>
+						<ul class="productmeta">
+							<li>Brand: adidas</li>
+							<li>Colorway: Desert Sage</li>
+							<li>Year: 2020</li>
+							<li>Gender: Men</li>
+							<li>Est Mrkt Value: Rs 20038</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		
+		
+		</div>
+	</div>
+	</div>
+	
+	
+	
+	
+	
 
-                <a routerLink="/account/addresses/new" class="btn btn-secondary btn-sm">
-                    {{ 'BUTTON_ADD_ADDRESS'|translate }}
-                </a>
-            </div>
-        </div>
-    </div>
 
-    <ng-container *ngIf="address">
-        <ng-template #footer>
-            <a [routerLink]="url.address(address)">{{ 'LINK_EDIT_ADDRESS'|translate }}</a>
-        </ng-template>
-
-        <app-address-card
-            class="dashboard__address"
-            [address]="address"
-            [label]="'TEXT_DEFAULT_ADDRESS'|translate"
-            [featured]="true"
-            [footer]="footer"
-        ></app-address-card>
-    </ng-container>
-
-    <div *ngIf="orders.length > 0" class="dashboard__orders card">
-        <div class="card-header">
-            <h5>{{ 'HEADER_RECENT_ORDERS'|translate }}</h5>
-        </div>
-        <div class="card-divider"></div>
-        <div class="card-table">
-            <div class="table-responsive-sm">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>{{ 'TABLE_NUMBER'|translate }}</th>
-                        <th>{{ 'TABLE_DATE'|translate }}</th>
-                        <th>{{ 'TABLE_STATUS'|translate }}</th>
-                        <th>{{ 'TABLE_TOTAL'|translate }}</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr *ngFor="let order of orders">
-                        <td>
-                            <a [routerLink]="url.order(order)">
-                                {{ 'FORMAT_ORDER_NUMBER'|translate:{number: order.number} }}
-                            </a>
-                        </td>
-                        <td>{{ 'FORMAT_DATE_MEDIUM'|translate:{date: order.createdAt} }}</td>
-                        <td>{{ 'TEXT_ORDER_STATUS_' + order.status|translate }}</td>
-                        <td>{{ 'TEXT_ORDER_TOTAL'|translate:{total: order.total|currencyFormat, quantity: order.quantity} }}</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+    
 </div>

@@ -15,6 +15,9 @@ import { LayoutComponent } from './components/layout/layout.component';
 // pages
 import { PageAddressesComponent } from './pages/page-addresses/page-addresses.component';
 import { PageDashboardComponent } from './pages/page-dashboard/page-dashboard.component';
+import { PageActiveComponent } from './pages/page-active/page-active.component';
+import { PageHistoryComponent } from './pages/page-history/page-history.component';
+import { PageSettingsComponent } from './pages/page-settings/page-settings.component';
 import { PageEditAddressComponent } from './pages/page-edit-address/page-edit-address.component';
 import { PageGarageComponent } from './pages/page-garage/page-garage.component';
 import { PageLoginComponent } from './pages/page-login/page-login.component';
@@ -31,6 +34,9 @@ import { PageProfileComponent } from './pages/page-profile/page-profile.componen
         // pages
         PageAddressesComponent,
         PageDashboardComponent,
+		PageActiveComponent,
+		PageHistoryComponent,
+		PageSettingsComponent,
         PageEditAddressComponent,
         PageGarageComponent,
         PageLoginComponent,

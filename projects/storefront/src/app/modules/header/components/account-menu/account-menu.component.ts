@@ -41,7 +41,7 @@ export class AccountMenuComponent implements OnInit, OnDestroy {
 
     ngOnInit(): void {
         this.form = this.fb.group({
-            email: ['red-parts@example.com', [Validators.required, Validators.email]],
+            email: ['test@gmail.com', [Validators.required, Validators.email]],
             password: ['123456', [Validators.required]],
         });
     }
