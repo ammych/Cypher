@@ -7,8 +7,22 @@ import { Order } from '../../interfaces/order';
 export interface EditProfileData {
     firstName: string;
     lastName: string;
+	address: string;
+	state: string;
+	zipcode: string;
+	country: string;
     email: string;
     phone: string;
+	selleraddress: string;
+	sellerstate: string;
+	sellerzipcode: string;
+	sellercountry: string;
+	selleremail: string;
+    sellerphone: string;
+	bankaccountholdername: string;
+	bankaccountnumber: string;
+	ifsccode: string;
+	aadharnumber: string;
 }
 
 export interface GetOrdersListOptions {
