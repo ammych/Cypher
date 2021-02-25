@@ -1,11 +1,13 @@
-<div class="card">
-    <div class="card-header">
-        <h5>{{ 'HEADER_EDIT_PROFILE'|translate }}</h5>
+
+    <div class="profile-header">
+        <ul>
+			<li><a routerLink="/account/profile" class="active">Buyer Info</a></li>
+			<li class="profilesecondli"><a routerLink="/account/seller">Seller Info</a></li>
+		</ul>
     </div>
-    <div class="card-divider"></div>
-    <div class="card-body card-body--padding--2">
+    <div class="profile-body">
         <div class="row no-gutters">
-            <div class="col-12 col-lg-7 col-xl-6" [formGroup]="form">
+            <div class="col-12 col-lg-5 col-xl-5" [formGroup]="form">
                 <div class="form-group">
                     <label for="profile-first-name">{{ 'INPUT_FIRST_NAME_LABEL'|translate }}</label>
                     <input
@@ -14,7 +16,6 @@
                         formControlName="firstName"
                         class="form-control"
                         [class.is-invalid]="form.controls.firstName|isInvalid"
-                        [placeholder]="'INPUT_FIRST_NAME_PLACEHOLDER'|translate"
                     >
                     <div class="invalid-feedback">
                         <div *ngIf="form.controls.firstName|hasError:'required'">
@@ -30,10 +31,69 @@
                         formControlName="lastName"
                         class="form-control"
                         [class.is-invalid]="form.controls.lastName|isInvalid"
-                        [placeholder]="'INPUT_LAST_NAME_PLACEHOLDER'|translate"
                     >
                     <div class="invalid-feedback">
                         <div *ngIf="form.controls.lastName|hasError:'required'">
+                            {{ 'ERROR_FORM_REQUIRED'|translate }}
+                        </div>
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label for="profile-address">{{ 'INPUT_ADDRESS_LABEL'|translate }}</label>
+                    <input
+                        type="text"
+                        id="profile-address"
+                        formControlName="address"
+                        class="form-control"
+                        [class.is-invalid]="form.controls.address|isInvalid"
+                    >
+                    <div class="invalid-feedback">
+                        <div *ngIf="form.controls.address|hasError:'required'">
+                            {{ 'ERROR_FORM_REQUIRED'|translate }}
+                        </div>
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label for="profile-state">{{ 'INPUT_STATE_LABEL'|translate }}</label>
+                    <input
+                        type="text"
+                        id="profile-state"
+                        formControlName="state"
+                        class="form-control"
+                        [class.is-invalid]="form.controls.state|isInvalid"
+                    >
+                    <div class="invalid-feedback">
+                        <div *ngIf="form.controls.state|hasError:'required'">
+                            {{ 'ERROR_FORM_REQUIRED'|translate }}
+                        </div>
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label for="profile-zipcode">{{ 'INPUT_ZIPCODE_LABEL'|translate }}</label>
+                    <input
+                        type="text"
+                        id="profile-zipcode"
+                        formControlName="zipcode"
+                        class="form-control"
+                        [class.is-invalid]="form.controls.zipcode|isInvalid"
+                    >
+                    <div class="invalid-feedback">
+                        <div *ngIf="form.controls.zipcode|hasError:'required'">
+                            {{ 'ERROR_FORM_REQUIRED'|translate }}
+                        </div>
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label for="profile-country">{{ 'INPUT_COUNTRY_LABEL'|translate }}</label>
+                    <input
+                        type="text"
+                        id="profile-country"
+                        formControlName="country"
+                        class="form-control"
+                        [class.is-invalid]="form.controls.country|isInvalid"
+                    >
+                    <div class="invalid-feedback">
+                        <div *ngIf="form.controls.country|hasError:'required'">
                             {{ 'ERROR_FORM_REQUIRED'|translate }}
                         </div>
                     </div>
@@ -46,7 +106,6 @@
                         formControlName="email"
                         class="form-control"
                         [class.is-invalid]="form.controls.email|isInvalid"
-                        [placeholder]="'INPUT_EMAIL_ADDRESS_PLACEHOLDER'|translate"
                     >
                     <div class="invalid-feedback">
                         <div *ngIf="form.controls.email|hasError:'required'">
@@ -65,7 +124,6 @@
                         formControlName="phone"
                         class="form-control"
                         [class.is-invalid]="form.controls.phone|isInvalid"
-                        [placeholder]="'INPUT_PHONE_NUMBER_PLACEHOLDER'|translate"
                     >
                     <div class="invalid-feedback">
                         <div *ngIf="form.controls.phone|hasError:'required'">
@@ -74,16 +132,87 @@
                     </div>
                 </div>
 
+				<input
+                    type="hidden"
+                    id="profile-selleraddress"
+                    formControlName="selleraddress"
+                    class="form-control"
+					[class.is-invalid]="form.controls.selleraddress|isInvalid"
+                >
+				<input
+                    type="hidden"
+                    id="profile-sellerstate"
+                    formControlName="sellerstate"
+                    class="form-control"
+                    [class.is-invalid]="form.controls.sellerstate|isInvalid"
+                >
+				<input
+                    type="hidden"
+                    id="profile-sellerzipcode"
+                    formControlName="sellerzipcode"
+                    class="form-control"
+                    [class.is-invalid]="form.controls.sellerzipcode|isInvalid"
+                >
+				<input
+                    type="hidden"
+                    id="profile-sellercountry"
+                    formControlName="sellercountry"
+                    class="form-control"
+                    [class.is-invalid]="form.controls.sellercountry|isInvalid"
+                >
+				<input
+                    type="hidden"
+                    id="profile-selleremail"
+                    formControlName="selleremail"
+                    class="form-control"
+                    [class.is-invalid]="form.controls.selleremail|isInvalid"
+                >
+				<input
+                    type="hidden"
+                    id="profile-sellerphone"
+                    formControlName="sellerphone"
+                    class="form-control"
+                    [class.is-invalid]="form.controls.sellerphone|isInvalid"
+                >
+				<input
+                    type="hidden"
+                    id="profile-bankaccountholdername"
+                    formControlName="bankaccountholdername"
+                    class="form-control"
+                    [class.is-invalid]="form.controls.bankaccountholdername|isInvalid"
+				>
+				<input
+                    type="hidden"
+                    id="profile-bankaccountnumber"
+                    formControlName="bankaccountnumber"
+                    class="form-control"
+					[class.is-invalid]="form.controls.bankaccountnumber|isInvalid"
+                >
+				<input
+                    type="hidden"
+                    id="profile-ifsccode"
+                    formControlName="ifsccode"
+                    class="form-control"
+                    [class.is-invalid]="form.controls.ifsccode|isInvalid"
+                >
+				<input
+                    type="hidden"
+                    id="profile-aadharnumber"
+                    formControlName="aadharnumber"
+                    class="form-control"
+                    [class.is-invalid]="form.controls.aadharnumber|isInvalid"
+                >
+
+
                 <div class="form-group mb-0">
                     <button
                         class="btn btn-primary mt-3"
                         [class.btn-loading]="saveInProgress"
                         (click)="save()"
                     >
-                        {{ 'BUTTON_SAVE'|translate }}
+                        {{ 'BUTTON_EDIT'|translate }}
                     </button>
                 </div>
             </div>
         </div>
     </div>
-</div>

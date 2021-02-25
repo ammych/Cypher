@@ -19,7 +19,7 @@ import { PageActiveComponent } from './pages/page-active/page-active.component';
 import { PageHistoryComponent } from './pages/page-history/page-history.component';
 import { PageSettingsComponent } from './pages/page-settings/page-settings.component';
 import { PageEditAddressComponent } from './pages/page-edit-address/page-edit-address.component';
-import { PageGarageComponent } from './pages/page-garage/page-garage.component';
+import { PageSellerComponent } from './pages/page-seller/page-seller.component';
 import { PageLoginComponent } from './pages/page-login/page-login.component';
 import { PageOrderDetailsComponent } from './pages/page-order-details/page-order-details.component';
 import { PageOrdersComponent } from './pages/page-orders/page-orders.component';
@@ -38,7 +38,7 @@ import { PageProfileComponent } from './pages/page-profile/page-profile.componen
 		PageHistoryComponent,
 		PageSettingsComponent,
         PageEditAddressComponent,
-        PageGarageComponent,
+        PageSellerComponent,
         PageLoginComponent,
         PageOrderDetailsComponent,
         PageOrdersComponent,

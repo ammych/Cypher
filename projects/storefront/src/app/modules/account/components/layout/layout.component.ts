@@ -40,7 +40,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
     private initNavigation(): void {
         this.navigation = [
             {type: 'link', label: this.translate.instant('LINK_ACCOUNT_DASHBOARD'), url: '/account/dashboard'},
-            {type: 'link', label: this.translate.instant('LINK_ACCOUNT_GARAGE'), url: '/account/garage'},
+            {type: 'link', label: this.translate.instant('LINK_ACCOUNT_GARAGE'), url: '/account/seller'},
             {type: 'link', label: this.translate.instant('LINK_ACCOUNT_PROFILE'), url: '/account/profile'},
             {type: 'link', label: this.translate.instant('LINK_ACCOUNT_ORDERS'), url: '/account/orders'},
             {type: 'link', label: this.translate.instant('LINK_ACCOUNT_ADDRESSES'), url: '/account/addresses'},
