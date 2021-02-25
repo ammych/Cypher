@@ -22,18 +22,16 @@ $local-breadcrumb-padding-y: $local-breadcrumb-padding-top + $local-breadcrumb-p
     padding-bottom: $local-breadcrumb-padding-bottom;
 }
 .block-header__title {
-    font-size: 2.25rem;
+    font-size: 25px;
     font-weight: $font-weight-bold;
     margin: 0;
-    padding-top: $local-title-padding-y;
-    padding-bottom: $local-title-padding-y + 4px;
+    padding-top: 0;
+    padding-bottom: 20px;
 }
 
 
 @include media-breakpoint-up(xl) {
-    .block-header__title {
-        margin: 0 auto;
-    }
+    
     .block-header__breadcrumb + .block-header__title {
         margin-top: -($local-breadcrumb-height + $local-breadcrumb-padding-y);
     }
