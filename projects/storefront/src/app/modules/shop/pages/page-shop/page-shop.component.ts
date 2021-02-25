@@ -90,6 +90,8 @@ export class PageShopComponent implements OnInit, OnDestroy {
         this.pageTitle$ = category$.pipe(
             switchMap(category => category ? of(category.name) : this.translate.stream('HEADER_SHOP')),
         );
+		
+		
 
         this.breadcrumbs$ = this.language.current$.pipe(
             switchMap(() => category$.pipe(

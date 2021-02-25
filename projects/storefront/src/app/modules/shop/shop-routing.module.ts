@@ -66,7 +66,7 @@ const routes: Routes = [
         },
         data: {
             layout: 'grid',
-            gridLayout: 'grid-4-sidebar',
+            gridLayout: 'grid-4-full',
             sidebarPosition: 'start',
         },
     },
