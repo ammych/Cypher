@@ -11,9 +11,9 @@ export const sideMenu: SideMenuLink[] = [
         submenu: {
             type: 'menu',
             links: [
-                {title: 'Sneakers', url: '/'},
-                {title: 'Apparel', url: '/'},
-                {title: 'Accessories', url: '/'},
+                {title: 'Sneakers', url: '/shop/category/sneakers/products'},
+                {title: 'Apparel', url: '/shop/category/apparel/products'},
+                {title: 'Accessories', url: '/shop/category/accessories/products'},
             ],
         },
     },
@@ -27,9 +27,9 @@ export const sideMenu: SideMenuLink[] = [
         submenu: {
             type: 'menu',
             links: [
-                {title: 'Profile', url: '/'},
+                {title: 'Profile', url: '/account/profile'},
                 {title: 'Portfolio', url: '/'},
-                {title: 'Seller Dashboard', url: '/'},
+                {title: 'Seller Dashboard', url: '/account/dashboard'},
 				{title: 'Orders', url: '/'},
 				{title: 'Settings', url: '/'},
             ],

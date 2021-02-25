@@ -72,7 +72,7 @@ function makeProducts(defs: ProductDef[]): Product[] {
             brand = brands.find(x => x.slug === def.brand) || brand;
         }
 
-        const categorySlugs: string[] = def.categories || ['tools-garage'];
+        const categorySlugs: string[] = def.categories || ['sneakers'];
         const categories: ShopCategory[] = categorySlugs.map(categorySlug => {
             return shopCategoriesList.find(x => x.slug === categorySlug);
         }).map(x => prepareCategory(x));
@@ -126,7 +126,10 @@ function makeProducts(defs: ProductDef[]): Product[] {
             `,
             slug: def.slug,
             sku: def.sku,
-            partNumber: 'BDX-750Z370-S',
+			colorway: def.colorway,
+			retailprice: def.retailprice,
+			releasedate: def.releasedate,
+			indiarelease: def.indiarelease,
             stock: 'in-stock',
             price: def.price,
             compareAtPrice: def.compareAtPrice || null,
@@ -170,24 +173,12 @@ function makeProducts(defs: ProductDef[]): Product[] {
             ),
             options: [
                 {
-                    type: 'default',
-                    slug: 'material',
-                    name: 'Material',
+                    type: 'size',
+                    slug: 'size',
+                    name: 'Size',
                     values: [
-                        {slug: 'steel', name: 'Steel'},
-                        {slug: 'aluminium', name: 'Aluminium'},
-                        {slug: 'thorium', name: 'Thorium'},
-                    ],
-                },
-                {
-                    type: 'color',
-                    slug: 'color',
-                    name: 'Color',
-                    values: [
-                        {slug: 'white', name: 'White', color: '#fff'},
-                        {slug: 'yellow', name: 'Yellow', color: '#ffd333'},
-                        {slug: 'red', name: 'Red', color: '#ff4040'},
-                        {slug: 'blue', name: 'Blue', color: '#4080ff'},
+                        {slug: '11.5', name: '11.5'},
+                        {slug: '12', name: '12'},
                     ],
                 },
             ],
@@ -203,6 +194,10 @@ const productsDef: ProductDef[] = [
         name: 'Air Jordan 1 retro high Off- White Chicago',
         slug: 'brandix-spark-plug-kit-asr-400',
         sku: '140-10440-B',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 2680,
         images: [
             'assets/images/products/product-1-1.png',
@@ -213,7 +208,7 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         compatibility: [1, 2],
         attributes: {
-            Color: 'White',
+            Color: '11.5',
         },
     },
     {
