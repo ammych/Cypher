@@ -6,6 +6,10 @@ export interface ProductDef {
     name: string;
     slug: string;
     sku: string;
+	colorway: string;
+	retailprice: number;
+	releasedate: string;
+	indiarelease: string;
     price: number;
     compareAtPrice?: number;
     images: string[];

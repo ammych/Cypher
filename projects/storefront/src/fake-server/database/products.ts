@@ -173,7 +173,7 @@ function makeProducts(defs: ProductDef[]): Product[] {
             ),
             options: [
                 {
-                    type: 'size',
+                    type: 'default',
                     slug: 'size',
                     name: 'Size',
                     values: [
@@ -208,13 +208,17 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         compatibility: [1, 2],
         attributes: {
-            Color: '11.5',
+            Size: '11.5',
         },
     },
     {
         name: 'Nike Adapt BB “MAG”',
         slug: 'brandix-brake-kit-bdx-750z370-s',
         sku: '573-23743-C',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 2650,
         images: [
             'assets/images/products/product-2-1.png',
@@ -224,13 +228,17 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         compatibility: [1],
         attributes: {
-            Color: 'Silver',
+            Size: 'Silver',
         },
     },
     {
         name: 'Air Jordan 4 Retro “Doernbecher”',
         slug: 'left-headlight-of-brandix-z54',
         sku: '009-50078-Z',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 2680,
         compareAtPrice: 415,
         images: [
@@ -241,13 +249,17 @@ const productsDef: ProductDef[] = [
         reviews: 14,
         availability: 'in-stock',
         attributes: {
-            Color: 'Red',
+            Size: 'Red',
         },
     },
     {
         name: 'Air Jordan 4 Retro “Doernbecher”',
         slug: 'glossy-gray-19-aluminium-wheel-ar-19',
         sku: 'A43-44328-B',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 2680,
         images: [
             'assets/images/products/product-4-1.png',
@@ -258,13 +270,17 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         compatibility: 'unknown',
         attributes: {
-            Color: 'Black',
+            Size: 'Black',
         },
     },
     {
         name: 'Air Jordan 1 retro high Off- White Chicago',
         slug: 'twin-exhaust-pipe-from-brandix-z54',
         sku: '729-51203-B',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 749,
         images: [
             'assets/images/products/product-5-1.png',
@@ -274,13 +290,17 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         brand: 'red-gate',
         attributes: {
-            Color: 'Light Gray',
+            Size: 'Light Gray',
         },
     },
     {
         name: 'Nike Adapt BB “MAG”',
         slug: 'motor-oil-level-5',
         sku: '573-49386-C',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 23,
         images: [
             'assets/images/products/product-6-1.png',
@@ -290,13 +310,17 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         brand: 'sunset',
         attributes: {
-            Color: 'Gray',
+            Size: 'Gray',
         },
     },
     {
         name: 'Air Jordan 4 Retro “Doernbecher”',
         slug: 'brandix-engine-block-z4',
         sku: '753-38573-B',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 452,
         compareAtPrice: 573,
         images: [
@@ -307,13 +331,17 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         brand: 'red-gate',
         attributes: {
-            Color: 'Dark Gray',
+            Size: 'Dark Gray',
         },
     },
     {
         name: 'Air Jordan 4 Retro “Doernbecher”',
         slug: 'brandix-clutch-discs-z175',
         sku: '472-67382-Z',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 345,
         images: [
             'assets/images/products/product-8-1.png',
@@ -323,13 +351,17 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         brand: 'sunset',
         attributes: {
-            Color: 'Coal',
+            Size: 'Coal',
         },
     },
     {
         name: 'Air Jordan 1 retro high Off- White Chicago',
         slug: 'brandix-manual-five-speed-gearbox',
         sku: '855-78336-G',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 879,
         images: [
             'assets/images/products/product-1-1.png',
@@ -339,13 +371,17 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         brand: 'sunset',
         attributes: {
-            Color: 'Orange',
+            Size: 'Orange',
         },
     },
     {
         name: 'Nike Adapt BB “MAG”',
         slug: 'set-of-car-floor-mats-brandix-z4',
         sku: '473-75662-R',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 78,
         compareAtPrice: 94,
         images: [
@@ -356,13 +392,17 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         brand: 'red-gate',
         attributes: {
-            Color: 'Yellow',
+            Size: 'Yellow',
         },
     },
     {
         name: 'Air Jordan 4 Retro “Doernbecher”',
         slug: 'taillights-brandix-z54',
         sku: '521-57812-H',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 60,
         images: [
             'assets/images/products/product-3-1.png',
@@ -372,13 +412,17 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         brand: 'red-gate',
         attributes: {
-            Color: 'Pear Green',
+            Size: 'Pear Green',
         },
     },
     {
         name: 'Air Jordan 4 Retro “Doernbecher”',
         slug: 'wiper-blades-brandix-wl2',
         sku: '994-34346-B',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 12,
         images: [
             'assets/images/products/product-4-1.png',
@@ -387,13 +431,17 @@ const productsDef: ProductDef[] = [
         reviews: 41,
         availability: 'in-stock',
         attributes: {
-            Color: 'Green',
+            Size: 'Green',
         },
     },
     {
         name: 'Air Jordan 1 retro high Off- White Chicago',
         slug: 'fantastic-12-stroke-engine-with-a-power-of-1991-hp',
         sku: '985-00884-S',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 2579,
         images: [
             'assets/images/products/product-5-1.png',
@@ -402,13 +450,17 @@ const productsDef: ProductDef[] = [
         reviews: 17,
         availability: 'in-stock',
         attributes: {
-            Color: 'Emerald',
+            Size: 'Emerald',
         },
     },
     {
         name: 'Nike Adapt BB “MAG”',
         slug: 'set-of-four-19-inch-spiked-tires',
         sku: '855-56888-U',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 327,
         images: [
             'assets/images/products/product-6-1.png',
@@ -418,13 +470,17 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         brand: 'sunset',
         attributes: {
-            Color: 'Shamrock',
+            Size: 'Shamrock',
         },
     },
     {
         name: 'Air Jordan 4 Retro “Doernbecher”',
         slug: '40-megawatt-low-beam-lamp',
         sku: '345-99553-E',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 4,
         compareAtPrice: 8,
         images: [
@@ -435,13 +491,17 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         brand: 'no-name',
         attributes: {
-            Color: 'Shakespeare',
+            Size: 'Shakespeare',
         },
     },
     {
         name: 'Air Jordan 4 Retro “Doernbecher”',
         slug: 'brandix-drivers-seat',
         sku: '563-73744-Q',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 78,
         images: [
             'assets/images/products/product-8-1.png',
@@ -451,13 +511,17 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         brand: 'sunset',
         attributes: {
-            Color: 'Blue',
+            Size: 'Blue',
         },
     },
     {
         name: 'Air Jordan 1 retro high Off- White Chicago',
         slug: 'air-filter-from-ashs-chainsaw',
         sku: '999-60606-X',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 666.99,
         images: [
             'assets/images/products/product-1-1.png',
@@ -467,13 +531,17 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         brand: 'turbo-electric',
         attributes: {
-            Color: 'Dark Blue',
+            Size: 'Dark Blue',
         },
     },
     {
         name: 'Nike Adapt BB “MAG”',
         slug: 'side-rearview-mirror',
         sku: '545-74573-D',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 40,
         compareAtPrice: 60,
         images: [
@@ -484,13 +552,17 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         brand: 'turbo-electric',
         attributes: {
-            Color: 'Violet',
+            Size: 'Violet',
         },
     },
     {
         name: 'Air Jordan 4 Retro “Doernbecher”',
         slug: 'brandix-car-door-lock',
         sku: '965-73344-F',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 21,
         compareAtPrice: 31,
         images: [
@@ -502,13 +574,17 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         brand: 'turbo-electric',
         attributes: {
-            Color: 'Purple',
+            Size: 'Purple',
         },
     },
     {
         name: 'Air Jordan 4 Retro “Doernbecher”',
         slug: 'air-suspension-for-brandix-car',
         sku: '365-32667-P',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 162,
         compareAtPrice: 174,
         images: [
@@ -519,13 +595,17 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         brand: 'sunset',
         attributes: {
-            Color: 'Cerise',
+            Size: 'Cerise',
         },
     },
     {
         name: 'Air Jordan 1 retro high Off- White Chicago',
         slug: 'sunset-brake-kit',
         sku: 'SSX-780B390-S',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 1259,
         images: [
             'assets/images/products/product-5-1.png',
@@ -535,13 +615,17 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         brand: 'sunset',
         attributes: {
-            Color: 'Orange',
+            Size: 'Orange',
         },
     },
     {
         name: 'Nike Adapt BB “MAG”',
         slug: 'specter-brake-kit',
         sku: 'SCT-123A380-S',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 799,
         images: [
             'assets/images/products/product-6-1.png',
@@ -551,13 +635,17 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         brand: 'specter',
         attributes: {
-            Color: 'Green',
+            Size: 'Green',
         },
     },
     {
         name: 'Air Jordan 4 Retro “Doernbecher”',
         slug: 'brake-kit',
         sku: 'NNO-120K643-S',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 569,
         images: [
             'assets/images/products/product-7-1.png',
@@ -567,13 +655,17 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         brand: 'no-name',
         attributes: {
-            Color: 'Shamrock',
+            Size: 'Shamrock',
         },
     },
     {
         name: 'Air Jordan 4 Retro “Doernbecher”',
         slug: 'stp-generator-platinum',
         sku: 'STP-577843-E',
+		colorway: 'white/metallic silver-midnight navy',
+		retailprice: 170,
+		releasedate: '11/11/2020',
+		indiarelease: '11/11/2020',
         price: 379,
         images: [
             'assets/images/products/product-8-1.png',
@@ -583,7 +675,7 @@ const productsDef: ProductDef[] = [
         availability: 'in-stock',
         brand: 'red-gate',
         attributes: {
-            Color: 'Dark Blue',
+            Size: 'Dark Blue',
         },
     },
 ];

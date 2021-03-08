@@ -16,8 +16,6 @@ import {
     GetSearchSuggestionsResult,
 } from '../../app/api/base';
 import { AbstractFilterBuilder } from '../filters/abstract-filter-builder';
-import { CategoryFilterBuilder } from '../filters/category-filter-builder';
-import { VehicleFilterBuilder } from '../filters/vehicle-filter-builder';
 import { RangeFilterBuilder } from '../filters/range-filter-builder';
 import { CheckFilterBuilder } from '../filters/check-filter-builder';
 import { RadioFilterBuilder } from '../filters/radio-filter-builder';
@@ -40,8 +38,6 @@ function getProducts(shift: number, categorySlug: string = null): Product[] {
 export function getProductsList(options?: GetProductsListOptions): Observable<ProductsList> {
     const filterValues = options.filters || {};
     const filters: AbstractFilterBuilder[] = [
-        new CategoryFilterBuilder('category', 'Categories'),
-        new VehicleFilterBuilder('vehicle', 'Vehicle'),
         new RangeFilterBuilder('price', 'Price'),
         new CheckFilterBuilder('brand', 'Brand'),
         new RadioFilterBuilder('discount', 'With Discount'),
