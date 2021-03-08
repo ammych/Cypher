@@ -6,14 +6,14 @@ import {
     ProductAttributeGroup,
     ProductCompatibilityResult
 } from '../../../../interfaces/product';
-import { Vehicle } from '../../../../interfaces/vehicle';
+//import { Vehicle } from '../../../../interfaces/vehicle';
 import { ProductGalleryLayout } from '../../../shared/components/product-gallery/product-gallery.component';
 import { UrlService } from '../../../../services/url.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { CartService } from '../../../../services/cart.service';
 import { finalize, map, switchMap, takeUntil } from 'rxjs/operators';
-import { ShopApi, VehicleApi } from '../../../../api/base';
+import { ShopApi } from '../../../../api/base';
 import { Observable, of, Subject } from 'rxjs';
 import { Breadcrumb } from '../../../shared/components/block-header/block-header.component';
 import { getCategoryPath } from '../../../../functions/utils';
@@ -42,7 +42,7 @@ export class PageProductComponent implements OnInit {
 
     breadcrumb$: Observable<Breadcrumb[]>;
 
-    vehicle: Vehicle = null;
+    //vehicle: Vehicle = null;
 
     product: Product;
 
@@ -74,7 +74,7 @@ export class PageProductComponent implements OnInit {
         private language: LanguageService,
         private cart: CartService,
         private shop: ShopApi,
-        public vehicleService: VehicleApi,
+        //public vehicleService: VehicleApi,
         public url: UrlService,
     ) { }
 
@@ -118,9 +118,7 @@ export class PageProductComponent implements OnInit {
             takeUntil(this.destroy$),
         ).subscribe(x => this.relatedProducts = x);
 
-        this.vehicleService.currentVehicle$.pipe(
-            takeUntil(this.destroy$),
-        ).subscribe(vehicle => this.vehicle = vehicle);
+        
 
         this.form = this.fb.group({
             options: [{}],
@@ -172,20 +170,13 @@ export class PageProductComponent implements OnInit {
     }
 
     compatibility(): ProductCompatibilityResult {
-        if (!this.vehicle) {
-            return null;
-        }
-
+        
         if (this.product.compatibility === 'all') {
             return 'all';
         }
         if (this.product.compatibility === 'unknown') {
             return 'unknown';
         }
-        if (this.product.compatibility.includes(this.vehicle.id)) {
-            return 'fit';
-        } else {
-            return 'not-fit';
-        }
+        
     }
 }

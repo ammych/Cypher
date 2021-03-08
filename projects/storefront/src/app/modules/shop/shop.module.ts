@@ -43,13 +43,13 @@ import { WidgetFiltersComponent } from './widgets/widget-filters/widget-filters.
 import { WidgetProductsComponent } from './widgets/widget-products/widget-products.component';
 
 // filters
-import { FilterCategoryComponent } from './filters/filter-category/filter-category.component';
+//import { FilterCategoryComponent } from './filters/filter-category/filter-category.component';
 import { FilterCheckComponent } from './filters/filter-check/filter-check.component';
 import { FilterColorComponent } from './filters/filter-color/filter-color.component';
 import { FilterRadioComponent } from './filters/filter-radio/filter-radio.component';
 import { FilterRangeComponent } from './filters/filter-range/filter-range.component';
 import { FilterRatingComponent } from './filters/filter-rating/filter-rating.component';
-import { FilterVehicleComponent } from './filters/filter-vehicle/filter-vehicle.component';
+//import { FilterVehicleComponent } from './filters/filter-vehicle/filter-vehicle.component';
 
 
 @NgModule({
@@ -79,13 +79,13 @@ import { FilterVehicleComponent } from './filters/filter-vehicle/filter-vehicle.
         WidgetFiltersComponent,
         WidgetProductsComponent,
         // filters
-        FilterCategoryComponent,
+        //FilterCategoryComponent,
         FilterCheckComponent,
         FilterColorComponent,
         FilterRadioComponent,
         FilterRangeComponent,
         FilterRatingComponent,
-        FilterVehicleComponent,
+        //FilterVehicleComponent,
     ],
     imports: [
         // modules (angular)
