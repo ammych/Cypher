@@ -16,37 +16,30 @@
                     <div class="quickview__product-name">
                         {{ product.name }}
                     </div>
-                    <div class="quickview__product-rating">
-                        <div class="quickview__product-rating-stars">
-                            <app-rating [value]="product.rating"></app-rating>
-                        </div>
-                        <div class="quickview__product-rating-title">
-                            {{ 'TEXT_RATING_LABEL'|translate:{rating: product.rating, reviews: product.reviews} }}
-                        </div>
-                    </div>
+                   
                     <div class="quickview__product-meta">
                         <table>
                             <tbody>
                             <tr>
-                                <th>{{ 'TABLE_SKU'|translate }}</th>
-                                <td>{{ product.sku }}</td>
-                            </tr>
-                            <tr>
-                                <th>{{ 'TABLE_BRAND'|translate }}</th>
-                                <td>
-                                    <a [routerLink]="url.brand(product.brand)">
-                                        {{ product.brand.name }}
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>{{ 'TABLE_COUNTRY'|translate }}</th>
-                                <td>{{ 'COUNTRY_NAME_' + product.brand.country|translate }}</td>
-                            </tr>
-                            <tr>
-                                <th>{{ 'TABLE_PART_NUMBER'|translate }}</th>
-                                <td>{{ product.partNumber }}</td>
-                            </tr>
+                                                <th>Style:</th>
+                                                <td>{{ product.sku }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Colorway:</th>
+                                                <td>{{ product.colorway }}</td>
+                                            </tr>
+											<tr>
+                                                <th>Retail Price:</th>
+                                                <td>${{ product.retailprice }}</td>
+                                            </tr>
+											<tr>
+                                                <th>Release date:</th>
+                                                <td>{{ product.releasedate }}</td>
+                                            </tr>
+											<tr>
+                                                <th>India Release:</th>
+                                                <td>{{ product.indiarelease }}</td>
+                                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -69,19 +62,7 @@
                                 </div>
                             </ng-container>
                         </div>
-                        <app-status-badge
-                            class="quickview__product-stock"
-                            [type]="{
-                                'in-stock': 'success',
-                                'out-of-stock': 'failure',
-                                'on-backorder': 'warning'
-                            }[product.stock]"
-                            [text]="{
-                                'in-stock': 'TEXT_STOCK_IN_STOCK',
-                                'out-of-stock': 'TEXT_STOCK_OUT_OF_STOCK',
-                                'on-backorder': 'TEXT_STOCK_ON_BACKORDER'
-                            }[product.stock]|translate"
-                        ></app-status-badge>
+                       
                     </div>
 
                     <app-product-form
