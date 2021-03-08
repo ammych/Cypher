@@ -31,16 +31,11 @@ export const sideMenu: SideMenuLink[] = [
                 {title: 'Portfolio', url: '/'},
                 {title: 'Seller Dashboard', url: '/account/dashboard'},
 				{title: 'Orders', url: '/'},
-				{title: 'Settings', url: '/'},
             ],
         },
     },
 	{
         title: 'Wishlist',
-        url: '/',
-    },
-	{
-        title: 'Settings',
         url: '/',
     },
 ];
