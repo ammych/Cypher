@@ -6,6 +6,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { PageAddressesComponent } from './pages/page-addresses/page-addresses.component';
 import { PageDashboardComponent } from './pages/page-dashboard/page-dashboard.component';
 import { PageActiveComponent } from './pages/page-active/page-active.component';
+import { PagePendingComponent } from './pages/page-pending/page-pending.component';
 import { PageHistoryComponent } from './pages/page-history/page-history.component';
 import { PageSettingsComponent } from './pages/page-settings/page-settings.component';
 import { PageEditAddressComponent } from './pages/page-edit-address/page-edit-address.component';
@@ -38,6 +39,10 @@ const routes: Routes = [
 			{
                 path: 'active',
                 component: PageActiveComponent,
+            },
+			{
+                path: 'pending',
+                component: PagePendingComponent,
             },
 			{
                 path: 'settings',

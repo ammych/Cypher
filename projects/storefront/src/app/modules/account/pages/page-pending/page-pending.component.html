@@ -6,8 +6,8 @@
 	</div>
 	<ul class="dashboardlinks">
 		<li><a routerLink="/account/dashboard"><i class="fa fa-plus"></i>{{ 'TEXT_ADD_NEW'|translate }}</a></li>
-		<li><a routerLink="/account/active"  class="active">{{ 'TEXT_ACTIVE'|translate }}</a></li>
-		<li><a routerLink="/account/pending">{{ 'TEXT_PENDING'|translate }}</a></li>
+		<li><a routerLink="/account/active">{{ 'TEXT_ACTIVE'|translate }}</a></li>
+		<li><a routerLink="/account/pending"   class="active">{{ 'TEXT_PENDING'|translate }}</a></li>
 		
 	</ul>
 	
@@ -15,22 +15,12 @@
 	<div class="dashboardcontent">
 		<div class="row row-eq-height">
 			<div class="col-md-3">
-				<div class="activeproductplusbox">
-					<div class="activeproductimage">
-						<img src="assets/images/plus.png">
-					</div>
-					<div class="activeproductstatus">
-						<a routerLink="/account/dashboard">{{ 'TEXT_ADD_NEW'|translate }}</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
 				<div class="activeproductbox">
 					<div class="activeproductimage">
 						<img src="assets/images/products/product-2-1.png">
 					</div>
-					<div class="activeproductstatusapproved">
-						{{ 'TEXT_ACTIVE'|translate }}
+					<div class="activeproductstatussold">
+						{{ 'TEXT_PENDINGKYC'|translate }}
 					</div>
 				</div>
 			</div>
@@ -40,7 +30,7 @@
 						<img src="assets/images/products/product-3-1.png">
 					</div>
 					<div class="activeproductstatussold">
-						{{ 'TEXT_INTRANSIT'|translate }}
+						{{ 'TEXT_SHIPNOW'|translate }}
 					</div>
 				</div>
 			</div>
@@ -50,7 +40,7 @@
 						<img src="assets/images/products/product-1-1.png">
 					</div>
 					<div class="activeproductstatussold">
-						{{ 'TEXT_AWAIT'|translate }}
+						{{ 'TEXT_SHIPNOW'|translate }}
 					</div>
 				</div>
 			</div>

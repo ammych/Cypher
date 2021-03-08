@@ -7,9 +7,8 @@
 	<ul class="dashboardlinks">
 		<li><a routerLink="/account/dashboard" class="active"><i class="fa fa-plus"></i>{{ 'TEXT_ADD_NEW'|translate }}</a></li>
 		<li><a routerLink="/account/active">{{ 'TEXT_ACTIVE'|translate }}</a></li>
-		<li><a routerLink="/account/history">{{ 'TEXT_HISTORY'|translate }}</a></li>
-		<li><a routerLink="/account/mostwanted">{{ 'TEXT_MOSTWANTED'|translate }}</a></li>
-		<li><a routerLink="/account/settings">{{ 'TEXT_SETTINGS'|translate }}</a></li>
+		<li><a routerLink="/account/pending">{{ 'TEXT_PENDING'|translate }}</a></li>
+		
 	</ul>
 	
 	
@@ -18,6 +17,22 @@
 		<div class="col-md-6">
 			<ng-container [formGroup]="form">
 				<div class="form-row">
+					<div class="form-group col-md-12">
+						<label for="{{ formId }}-sneaker-name">{{ 'INPUT_SNEAKER_NAME_LABEL'|translate }}</label>
+						<input
+							type="text"
+							class="form-control"
+							id="{{ formId }}-sneaker-name"
+							formControlName="sneakerName"
+							[class.is-invalid]="form.controls.sneakerName|isInvalid"
+							[placeholder]="'INPUT_SKU_PLACEHOLDER'|translate"
+						>
+						<div class="invalid-feedback">
+							<div *ngIf="form.controls.sneakerName|hasError:'required'">
+								{{ 'ERROR_FORM_REQUIRED'|translate }}
+							</div>
+						</div>
+					</div>
 					<div class="form-group col-md-12">
 						<label for="{{ formId }}-sku">{{ 'INPUT_SKU_LABEL'|translate }}</label>
 						<input
@@ -35,16 +50,21 @@
 						</div>
 					</div>
 					<div class="form-group col-md-12">
-						<label for="{{ formId }}-sneaker-name">{{ 'INPUT_SNEAKER_NAME_LABEL'|translate }}</label>
-						<input
-							type="text"
+						<label for="{{ formId }}-size">{{ 'INPUT_SIZE_LABEL'|translate }}</label>
+						<select
+							id="{{ formId }}-size"
 							class="form-control"
-							id="{{ formId }}-sneaker-name"
-							formControlName="sneakerName"
-							[class.is-invalid]="form.controls.sneakerName|isInvalid"
+							formControlName="size"
+							[class.is-invalid]="form.controls.size|isInvalid"
 						>
+							<option value="">{{ 'INPUT_BOX_CONDITION_PLACEHOLDER'|translate }}</option>
+							<option value="11">11</option>
+							<option value="11.5">11.5</option>
+							<option value="12">12</option>
+							<option value="12.5">12.5</option>
+						</select>
 						<div class="invalid-feedback">
-							<div *ngIf="form.controls.sneakerName|hasError:'required'">
+							<div *ngIf="form.controls.size|hasError:'required'">
 								{{ 'ERROR_FORM_REQUIRED'|translate }}
 							</div>
 						</div>
@@ -79,21 +99,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="form-group col-md-12">
-						<label for="{{ formId }}-size">{{ 'INPUT_SIZE_LABEL'|translate }}</label>
-						<input
-							type="text"
-							class="form-control"
-							id="{{ formId }}-size"
-							formControlName="size"
-							[class.is-invalid]="form.controls.size|isInvalid"
-						>
-						<div class="invalid-feedback">
-							<div *ngIf="form.controls.size|hasError:'required'">
-								{{ 'ERROR_FORM_REQUIRED'|translate }}
-							</div>
-						</div>
-					</div>
+					
 					<div class="form-group col-md-12">
 						<label for="{{ formId }}-boxcondition">{{ 'INPUT_BOX_CONDITION_LABEL'|translate }}</label>
 						<select
@@ -103,8 +109,9 @@
 							[class.is-invalid]="form.controls.boxcondition|isInvalid"
 						>
 							<option value="">{{ 'INPUT_BOX_CONDITION_PLACEHOLDER'|translate }}</option>
-							<option value="New">New</option>
-							<option value="Used">Used</option>
+							<option value="New Box">New Box</option>
+							<option value="Damaged Box">Damaged Box</option>
+							<option value="No Box">No Box</option>
 						</select>
 						<div class="invalid-feedback">
 							<div *ngIf="form.controls.boxcondition|hasError:'required'">
