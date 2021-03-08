@@ -42,7 +42,9 @@ export interface ProductOptionValueBase {
 export interface ProductOptionValueColor extends ProductOptionValueBase {
     color: string;
 }
-
+export interface ProductOptionValueSize extends ProductOptionValueBase {
+    size: string;
+}
 export interface ProductOptionBase {
     type: string;
     name: string;
@@ -58,6 +60,11 @@ export interface ProductOptionDefault extends ProductOptionBase {
 export interface ProductOptionColor extends ProductOptionBase {
     type: 'color';
     values: ProductOptionValueColor[];
+}
+
+export interface ProductOptionSize extends ProductOptionBase {
+    type: 'size';
+    values: ProductOptionValueSize[];
 }
 
 export type ProductOption = ProductOptionDefault | ProductOptionColor;
@@ -76,7 +83,10 @@ export interface Product {
     description: string;
     slug: string;
     sku?: string;
-    partNumber: string;
+	colorway: string;
+	retailprice: number;
+	releasedate: string;
+	indiarelease: string;
     stock: ProductStock;
     price: number;
     compareAtPrice: number|null;
