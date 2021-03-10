@@ -46,7 +46,7 @@ export function accountSignIn(email: string, password: string): Observable<User>
     return delayResponse(throwError(error('AUTH_WRONG_PASSWORD')));
 }
 
-export function accountSignUp(email: string, password: string): Observable<User> {
+export function accountSignUp(firstName: string, lastName: string, email: string, password: string): Observable<User> {
     if (!/^.+@.+$/.test(email)) {
         return delayResponse(throwError(error('AUTH_INVALID_EMAIL')));
     }
@@ -62,8 +62,8 @@ export function accountSignUp(email: string, password: string): Observable<User>
     const user: User = {
         email,
         phone: '38 972 588-42-36',
-        firstName: 'Amita',
-        lastName: 'Chaudhary',
+        firstName,
+        lastName,
 		address: '182, Hauz Khas Appartments, New Delhi',
 		state: 'Delhi',
 		zipcode: '110016',
