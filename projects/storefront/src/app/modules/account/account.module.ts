@@ -22,6 +22,7 @@ import { PageSettingsComponent } from './pages/page-settings/page-settings.compo
 import { PageEditAddressComponent } from './pages/page-edit-address/page-edit-address.component';
 import { PageSellerComponent } from './pages/page-seller/page-seller.component';
 import { PageLoginComponent } from './pages/page-login/page-login.component';
+import { PageRegisterComponent } from './pages/page-register/page-register.component';
 import { PageOrderDetailsComponent } from './pages/page-order-details/page-order-details.component';
 import { PageOrdersComponent } from './pages/page-orders/page-orders.component';
 import { PagePasswordComponent } from './pages/page-password/page-password.component';
@@ -42,6 +43,7 @@ import { PageProfileComponent } from './pages/page-profile/page-profile.componen
         PageEditAddressComponent,
         PageSellerComponent,
         PageLoginComponent,
+		PageRegisterComponent,
         PageOrderDetailsComponent,
         PageOrdersComponent,
         PagePasswordComponent,

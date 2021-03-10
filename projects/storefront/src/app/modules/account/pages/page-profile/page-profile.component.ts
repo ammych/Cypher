@@ -5,6 +5,7 @@ import { finalize, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
 import { TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-page-profile',
@@ -21,6 +22,7 @@ export class PageProfileComponent implements OnInit, OnDestroy {
         private fb: FormBuilder,
         private toastr: ToastrService,
         private translate: TranslateService,
+		private router: Router,
     ) { }
 
     ngOnInit(): void {
@@ -49,6 +51,11 @@ export class PageProfileComponent implements OnInit, OnDestroy {
     ngOnDestroy(): void {
         this.destroy$.next();
         this.destroy$.complete();
+    }
+	logout(): void {
+        this.account.signOut().pipe(takeUntil(this.destroy$)).subscribe(() => {
+            this.router.navigateByUrl('/account/login').then();
+        });
     }
 
     save(): void {

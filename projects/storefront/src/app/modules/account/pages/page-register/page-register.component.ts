@@ -8,14 +8,14 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { mustMatchValidator } from '../../../../functions/validators/must-match';
 
 @Component({
-    selector: 'app-page-login',
-    templateUrl: './page-login.component.html',
+    selector: 'app-page-register',
+    templateUrl: './page-register.component.html',
 })
-export class PageLoginComponent implements OnInit, OnDestroy {
+export class PageRegisterComponent implements OnInit, OnDestroy {
     private destroy$: Subject<void> = new Subject<void>();
 
-    loginForm: FormGroup;
-    loginInProgress = false;
+    registerForm: FormGroup;
+    registerInProgress = false;
 
     constructor(
         private fb: FormBuilder,
@@ -24,13 +24,14 @@ export class PageLoginComponent implements OnInit, OnDestroy {
     ) { }
 
     ngOnInit(): void {
-        this.loginForm = this.fb.group({
-            email: ['test@gmail.com', [Validators.required, Validators.email]],
-            password: ['123456', [Validators.required]],
-            remember: [false],
-        });
-
         
+        this.registerForm = this.fb.group({
+			firstName: ['', [Validators.required]],
+			lastName: ['', [Validators.required]],
+            email: ['', [Validators.required, Validators.email]],
+            password: ['', [Validators.required]],
+            confirmPassword: ['', [Validators.required]],
+        }, {validators: [mustMatchValidator('password', 'confirmPassword')]});
     }
 
     ngOnDestroy(): void {
@@ -38,26 +39,28 @@ export class PageLoginComponent implements OnInit, OnDestroy {
         this.destroy$.complete();
     }
 
-    login(): void {
-        this.loginForm.markAllAsTouched();
+    register(): void {
+        this.registerForm.markAllAsTouched();
 
-        if (this.loginInProgress || this.loginForm.invalid) {
+        if (this.registerInProgress || this.registerForm.invalid) {
             return;
         }
 
-        this.loginInProgress = true;
+        this.registerInProgress = true;
 
-        this.account.signIn(
-            this.loginForm.value.email,
-            this.loginForm.value.password,
+        this.account.signUp(
+			this.registerForm.value.firstName,
+			this.registerForm.value.lastName,
+            this.registerForm.value.email,
+            this.registerForm.value.password,
         ).pipe(
-            finalize(() => this.loginInProgress = false),
+            finalize(() => this.registerInProgress = false),
             takeUntil(this.destroy$),
         ).subscribe(
             () => this.router.navigateByUrl('/account/dashboard'),
             error => {
                 if (error instanceof HttpErrorResponse) {
-                    this.loginForm.setErrors({
+                    this.registerForm.setErrors({
                         server: `ERROR_API_${error.error.message}`,
                     });
                 } else {
@@ -66,6 +69,4 @@ export class PageLoginComponent implements OnInit, OnDestroy {
             },
         );
     }
-
-    
 }
