@@ -129,7 +129,7 @@ export class PageCheckoutComponent implements OnInit, OnDestroy {
                 const value = this.form.value;
 
                 if (value.createAccount) {
-                    return this.accountApi.signUp(value.account.email, value.account.password).pipe(
+                    return this.accountApi.signUp('', '', value.account.email, value.account.password).pipe(
                         map(() => checkoutData),
                     );
                 }
