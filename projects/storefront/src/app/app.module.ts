@@ -118,7 +118,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
         }),
         MobileModule,
         SharedModule,
-		SidenavModule
+		SidenavModule,
     ],
 })
 export class AppModule {

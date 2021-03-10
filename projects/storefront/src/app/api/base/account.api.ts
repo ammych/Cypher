@@ -42,7 +42,7 @@ export abstract class AccountApi {
 
     abstract signIn(email: string, password: string): Observable<User>;
 
-    abstract signUp(email: string, password: string): Observable<User>;
+    abstract signUp(firstName: string, lastName: string, email: string, password: string): Observable<User>;
 
     abstract signOut(): Observable<void>;
 

@@ -55,8 +55,8 @@ export class FakeAccountApi extends AccountApi {
         );
     }
 
-    signUp(email: string, password: string): Observable<User> {
-        return accountSignUp(email, password).pipe(
+    signUp(firstName: string, lastName: string, email: string, password: string): Observable<User> {
+        return accountSignUp(firstName, lastName, email, password).pipe(
             tap(user => this.setUser(user)),
         );
     }
