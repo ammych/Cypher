@@ -1,47 +1,58 @@
 <ul class="main-menu__list">
-    <ng-container *ngFor="let item of items">
-        <li
-            *ngIf="!item.customFields?.ignoreIn?.includes(header.desktopLayout)"
-            class="main-menu__item"
-            [class.main-menu__item--has-submenu]="item.submenu"
-        >
-            <ng-template #linkContent>
-                {{ item.title }}
-				<i *ngIf="item.submenu" class="fa fa-chevron-down" ></i>
-            </ng-template>
-
-            <a *ngIf="!item.external" [routerLink]="item.url" class="main-menu__link">
-                <ng-container *ngTemplateOutlet="linkContent"></ng-container>
-            </a>
-            <a *ngIf="item.external" [href]="item.url" class="main-menu__link" target="_blank">
-                <ng-container *ngTemplateOutlet="linkContent"></ng-container>
-            </a>
-
-            <div *ngIf="item.submenu" class="main-menu__submenu">
-			
-				<ul class="menu__list">
-					<li
-						*ngFor="let subitem of item.submenu.links"
-						class="menu__item"
-						[class.menu__item--has-submenu]="subitem.links"
-					>
-						<ng-template #linkContent>
-							{{ subitem.title }}
-						</ng-template>
-						
-						
-
-						<a *ngIf="!subitem.external" [routerLink]="subitem.url" class="menu__link">
-							<ng-container *ngTemplateOutlet="linkContent"></ng-container>
-						</a>
-						<a *ngIf="subitem.external" [href]="subitem.url" class="menu__link" target="_blank">
-							<ng-container *ngTemplateOutlet="linkContent"></ng-container>
-						</a>
-					</li>
-				</ul>
-
-                
+	<li class="main-menu__item">
+		<a routerLink="/sell" class="main-menu__link">Sell</a>
+	</li>
+	<li class="main-menu__item">
+		<div class="filter" appCollapseItem="filter--opened" #collapseItem="appCollapseItem">
+            <button type="button" class="filter__title" (click)="collapseItem.toggle()">
+                Categories
+            </button>
+            <div class="filter__body" appCollapseContent>
+                <div class="filter__container">
+                    <ul class="menu__list">
+						<li class="menu__item">
+							<a class="menu__link" routerLink="/shop/category/sneakers/products">Sneakers</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" routerLink="/shop/category/apparel/products">Apparel</a>
+						</li>
+					</ul>
+                </div>
             </div>
-        </li>
-    </ng-container>
+        </div>
+	</li>
+	<li class="main-menu__item">
+		<a href="#" class="main-menu__link">Feed</a>
+	</li>
+	<li class="main-menu__item">
+		<div class="filter" appCollapseItem="filter--opened" #collapseItem1="appCollapseItem">
+            <button type="button" class="filter__title" (click)="collapseItem1.toggle()">
+                Account
+            </button>
+            <div class="filter__body" appCollapseContent>
+                <div class="filter__container">
+                    <ul class="menu__list">
+						<li class="menu__item">
+							<a class="menu__link" routerLink="/account/profile">Profile</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#">Portfolio</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" routerLink="/account/dashboard">Seller Dashboard</a>
+						</li>
+						<li class="menu__item">
+							<a class="menu__link" href="#">Orders</a>
+						</li>
+						<li class="menu__item" *ngIf="account.user">
+							<a class="menu__link" (click)="logout()">Logout</a>
+						</li>
+					</ul>
+                </div>
+            </div>
+        </div>
+	</li>
+	<li class="main-menu__item">
+		<a href="#" class="main-menu__link">Wishlist</a>
+	</li>
 </ul>
