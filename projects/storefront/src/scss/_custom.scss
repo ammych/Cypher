@@ -754,14 +754,150 @@ background:#f4f4f4;width: 100%;
     padding-top: 0px;
     padding-bottom: 6px;}
 
+.privacybanner{ background:#000000;    text-align: center;
+    padding: 100px 50px;margin-bottom:30px;}
+.privacybanner img{max-width:250px;}
+.privacycontent p{font-size: 14px;margin-bottom:10px;}
+.block-space--layout--before-footer {
+    height: 30px;
+}
+.howitworkscontent p{font-size: 14px;margin-bottom:25px;}
+.howitworkscontent h5{font-size: 18px;margin-bottom:35px;}
+.btn.fullbtn {
+    width: 100%;}
+.contacts .form-group {
+    margin-bottom: 1.5rem;
+}
+.product--layout--full .product__gallery{width: 100%;
+   }
+.product--layout--full .product__gallery {
+    grid-column: unset;
+    grid-row: unset;
+}
+.product--layout--full .product__body {
+    display: block;}
+.product__gallery .owl-dots{
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+}
 
-
-
-
-
-
-
-
+.product__gallery .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+}
+.product__gallery .owl-dot {
+    background: 0 0;
+    color: inherit;
+    border: none;
+    padding: 0!important;
+    font: inherit;
+}
+.product__gallery .owl-dots .owl-dot span {
+    width: 8px;
+    height: 8px;
+    margin: 5px 7px;
+    background: #818284;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border-radius: 100%;
+}
+.product__gallery .owl-dots .owl-dot.active span, .product__gallery .owl-dots .owl-dot:hover span {
+    background: #000;
+}
+.authenticatebar{background: #000;color:#fff;text-transform:uppercase;text-align:center;padding: 2px 15px;
+    margin-bottom: 20px;}
+.image--type--product .image__tag, .image--type--category .image__tag {
+    padding: 0px 10px;
+}
+.product__meta{margin:20px 0px;}
+.product__meta h5{margin-bottom:15px;}
+.product__meta th{text-transform:uppercase;    border: 0px !important;
+    font-weight: normal;
+    color: #000;}
+.product__meta td{text-transform:uppercase;    border: 0px !important;
+    font-weight: normal;
+    color: #000;}
+.product__meta tr{border:0px !important;}
+.product__meta th, .product__meta td {
+    padding: 3px 0;
+}
+.product__form {
+    background: transparent;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+    border-top: 0;
+    border-bottom: 0;
+}
+.product-form__title,.product__prices label {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 4px;line-height: normal;
+}
+.product__price {
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: unset;
+    color: #000;
+    background: #e9e9eb;
+    padding: 8px 12px;
+    line-height: normal;
+}
+.product__prices {
+    padding: 0px 0 0px;}
+.product-form__control select{font-size: 18px;
+    font-weight: 500;
+    letter-spacing: unset;
+    color: #000;
+    background: #e9e9eb;
+    padding: 11px 12px;
+    line-height: normal;
+    width: 100%;
+    border: 0px;}
+.product-sellsection{margin-top:100px;}
+.sizeguide{color:#6e6d72;float: right;}
+.product-sellsection .row{margin-left:-6px;margin-right:-6px;}
+.product-sellsection .col-md-6{padding-left:6px;padding-right:6px;}
+.product__actions {
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    padding: 0;
+    margin-top: 0;
+}
+.product__prices .form-group {
+    margin-bottom: 0;
+}
+.product__actions .product__actions-item{width:100%;}
+.product__actions .btn{padding: 12px 30px !important;}
+.lastsaletitle{text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 4px;line-height: normal;}
+.lastsalesection{margin-top:30px;margin-bottom:30px;}
+.lastsaleprice{ font-size: 25px;
+    font-weight: bold;
+    letter-spacing: unset;
+    color: #000;
+    line-height: normal;}
+.salepricedown{color:red;font-size: 14px;}
+.salepricedown .fa{margin-right:10px;font-weight: bold;}
+.product__actions-item--wishlist,.product__actions-item--share{    background: transparent !important;
+    color: #000;
+    font-size: 23px;
+    border: 0px !important;
+    padding: 0px !important;
+    text-align: left !important;
+    font-weight: 500;
+    margin: 0px;
+    align-items: start !important;
+    justify-content: left;
+    margin-bottom: 7px;
+}
 
 
 
