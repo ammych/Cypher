@@ -13,6 +13,7 @@ import { PageEditAddressComponent } from './pages/page-edit-address/page-edit-ad
 import { PageSellerComponent } from './pages/page-seller/page-seller.component';
 import { PageLoginComponent } from './pages/page-login/page-login.component';
 import { PageRegisterComponent } from './pages/page-register/page-register.component';
+import { PageForgotPasswordComponent } from './pages/page-forgot-password/page-forgot-password.component';
 import { PageOrderDetailsComponent } from './pages/page-order-details/page-order-details.component';
 import { PageOrdersComponent } from './pages/page-orders/page-orders.component';
 import { PagePasswordComponent } from './pages/page-password/page-password.component';
@@ -113,6 +114,14 @@ const routes: Routes = [
 	{
         path: 'register',
         component: PageRegisterComponent,
+        canActivate: [AuthGuard],
+        data: {
+            authGuardMode: 'redirectToDashboard',
+        },
+    },
+	{
+        path: 'forgot-password',
+        component: PageForgotPasswordComponent,
         canActivate: [AuthGuard],
         data: {
             authGuardMode: 'redirectToDashboard',
