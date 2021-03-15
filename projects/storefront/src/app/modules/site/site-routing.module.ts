@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 // pages
 import { PageAboutUsComponent } from './pages/page-about-us/page-about-us.component';
-import { PageComponentsComponent } from './pages/page-components/page-components.component';
+import { PagePrivacyComponent } from './pages/page-privacy/page-privacy.component';
 import { PageContactUsOneComponent } from './pages/page-contact-us-one/page-contact-us-one.component';
-import { PageContactUsTwoComponent } from './pages/page-contact-us-two/page-contact-us-two.component';
+import { PageHowItWorksComponent } from './pages/page-how-it-works/page-how-it-works.component';
 import { PageFaqComponent } from './pages/page-faq/page-faq.component';
 import { PageTermsComponent } from './pages/page-terms/page-terms.component';
 import { PageTypographyComponent } from './pages/page-typography/page-typography.component';
@@ -25,8 +25,8 @@ const routes: Routes = [
         component: PageContactUsOneComponent,
     },
     {
-        path: 'contact-us-v2',
-        component: PageContactUsTwoComponent,
+        path: 'how-it-works',
+        component: PageHowItWorksComponent,
     },
     {
         path: 'terms',
@@ -37,8 +37,8 @@ const routes: Routes = [
         component: PageFaqComponent,
     },
     {
-        path: 'components',
-        component: PageComponentsComponent,
+        path: 'privacy',
+        component: PagePrivacyComponent,
     },
     {
         path: 'typography',
