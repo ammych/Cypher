@@ -19,38 +19,35 @@
                     <div class="product__body">
                         
 						<div class="row">
-							<div class="col-md-6">
+							<div class="col-md-5">
 								<app-product-gallery class="product__gallery" [images]="product.images" [layout]="galleryLayout"></app-product-gallery>
 							</div>
-							<div class="col-md-6">
+							<div class="col-md-7">
 								<div class="product__header">
 									<h1 class="product__title">{{ product.name }}</h1>
 								</div>
 								<div class="product__excerpt" *ngIf="product.excerpt">{{ product.excerpt }}</div>
-								<div class="product__info-card" [formGroup]="form">
-									<div class="product__info-body">
-										<div class="product__prices-stock">
-											<div class="product__prices">
-												<ng-container *ngIf="product.compareAtPrice">
-													<div class="product__price product__price--old">{{ product.compareAtPrice|currencyFormat }}</div>
-													<div class="product__price product__price--new">{{ product.price|currencyFormat }}</div>
-												</ng-container>
-												<ng-container *ngIf="!product.compareAtPrice">
-													<div class="product__price product__price--current">{{ product.price|currencyFormat }}</div>
-												</ng-container>
-											</div>
-										   
+								
+								<div class="product-sellsection"  [formGroup]="form">
+									<div class="row">
+										<div class="col-md-6">
+											<app-product-form
+												*ngIf="product.options.length > 0"
+												formControlName="options"
+												class="product__form"
+												[options]="product.options"
+											></app-product-form>
 										</div>
-
+										<div class="col-md-6">
+											<div class="product__prices">
+												<div class="form-group">
+													<label>Price (INR)</label>
+													<div class="product__price product__price--current">{{ product.price|currencyFormat }}</div>
+												</div>
+											</div>
+										</div>
 									</div>
-
-									<app-product-form
-										*ngIf="product.options.length > 0"
-										formControlName="options"
-										class="product__form"
-										[options]="product.options"
-									></app-product-form>
-
+									
 									<div class="product__actions">
 										<ng-container *ngIf="product.stock !== 'out-of-stock'">
 											<div class="product__actions-item product__actions-item--quantity">
@@ -77,21 +74,13 @@
 										>
 											<span>{{ 'BUTTON_ADD_TO_WISHLIST'|translate }}</span>
 										</button>
-										<button
-											appAddToCompare
-											type="button"
-											class="product__actions-item product__actions-item--compare"
-											[class.product__actions-item--loading]="addToCompare.inProgress"
-											(click)="addToCompare.add(this.product)"
-											#addToCompare="addToCompare"
-										>
-											<span>{{ 'BUTTON_ADD_TO_COMPARE'|translate }}</span>
-										</button>
+										
 									</div>
-
+									
 									
 								</div>
-                            
+								
+								
 							</div>
 						</div>
 						
@@ -99,7 +88,8 @@
 							<div class="col-md-6">
 								
                                     <div class="product__meta">
-                                        <table>
+										<h5>Details</h5>
+                                        <table class="table table-borderless">
                                             <tbody>
                                             <tr>
                                                 <th>Style:</th>
