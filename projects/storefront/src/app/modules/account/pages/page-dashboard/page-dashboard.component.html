@@ -123,6 +123,156 @@
 						<label for="{{ formId }}-images">{{ 'INPUT_IMAGE_LABEL'|translate }}</label>
 						<span class="text-small">{{ 'TEXT_IMAGE_OPTIONAL'|translate }}</span>
 						
+						<div *ngIf="showCarousel" class="block-slideshow__carousel uploadanglessection">
+							<owl-carousel-o  [options]="carouselOptions" appOwlPreventClick>
+								<ng-template carouselSlide>
+									<div class="anglesection">
+										<div class="anglesectionleft">
+											<div class="angleshoeimage">
+												<img src="assets/images/angles/angle1.jpg" class="reflect-rtl" alt="Appearance of the sole of both the shoes">
+											</div>
+										</div>
+										<div class="anglesectionright">
+											<div class="angleuploadsection">
+												<div class="file-upload">
+													<input type="file" />
+													<img src="assets/images/angleplus.png">
+												</div>
+												<div class="deleteangle">
+													<img src="assets/images/trash.png">
+												</div>
+											</div>
+										</div>
+									</div>
+								</ng-template>
+								<ng-template carouselSlide>
+									<div class="anglesection">
+										<div class="anglesectionleft">
+											<div class="angleshoeimage">
+												<img src="assets/images/angles/angle2.jpg" class="reflect-rtl" alt="Appearance of both the shoes from the top with insole visibility">
+											</div>
+										</div>
+										<div class="anglesectionright">
+											<div class="angleuploadsection">
+												<div class="file-upload">
+													<input type="file" />
+													<img src="assets/images/angleplus.png">
+												</div>
+												<div class="deleteangle">
+													<img src="assets/images/trash.png">
+												</div>
+											</div>
+										</div>
+									</div>
+								</ng-template>
+								<ng-template carouselSlide>
+									<div class="anglesection">
+										<div class="anglesectionleft">
+											<div class="angleshoeimage">
+												<img src="assets/images/angles/angle3.jpg"  class="reflect-rtl" alt="Appearance of both the shoes from behind">
+											</div>
+										</div>
+										<div class="anglesectionright">
+											<div class="angleuploadsection">
+												<div class="file-upload">
+													<input type="file" />
+													<img src="assets/images/angleplus.png">
+												</div>
+												<div class="deleteangle">
+													<img src="assets/images/trash.png">
+												</div>
+											</div>
+										</div>
+									</div>
+								</ng-template>
+								<ng-template carouselSlide>
+									<div class="anglesection">
+										<div class="anglesectionleft">
+											<div class="angleshoeimage">
+												<img src="assets/images/angles/angle4.jpg" class="reflect-rtl" alt="Shoe Box">
+											</div>
+										</div>
+										<div class="anglesectionright">
+											<div class="angleuploadsection">
+												<div class="file-upload">
+													<input type="file" />
+													<img src="assets/images/angleplus.png">
+												</div>
+												<div class="deleteangle">
+													<img src="assets/images/trash.png">
+												</div>
+											</div>
+										</div>
+									</div>
+								</ng-template>
+								<ng-template carouselSlide>
+									<div class="anglesection">
+										<div class="anglesectionleft">
+											<div class="angleshoeimage">
+												<img src="assets/images/angles/angle5.jpg"  class="reflect-rtl" alt="Appearance of both the shoes (full Image)">
+											</div>
+										</div>
+										<div class="anglesectionright">
+											<div class="angleuploadsection">
+												<div class="file-upload">
+													<input type="file" />
+													<img src="assets/images/angleplus.png">
+												</div>
+												<div class="deleteangle">
+													<img src="assets/images/trash.png">
+												</div>
+											</div>
+										</div>
+									</div>
+								</ng-template>
+								<ng-template carouselSlide>
+									<div class="anglesection">
+										<div class="anglesectionleft">
+											<div class="angleshoeimage">
+												<img src="assets/images/angles/angle6.jpg" class="reflect-rtl" alt="Zoomed in picture of the Air Jordan tag and Nike Swoosh">
+											</div>
+										</div>
+										<div class="anglesectionright">
+											<div class="angleuploadsection">
+												<div class="file-upload">
+													<input type="file" />
+													<img src="assets/images/angleplus.png">
+												</div>
+												<div class="deleteangle">
+													<img src="assets/images/trash.png">
+												</div>
+											</div>
+										</div>
+									</div>
+								</ng-template>
+								<ng-template carouselSlide>
+									<div class="anglesection">
+										<div class="anglesectionleft">
+											<div class="angleshoeimage">
+												<img src="assets/images/angles/angle7.jpg" class="reflect-rtl" alt="Appearance of the toe box for both the shoes (Zoomed in)">
+											</div>
+										</div>
+										<div class="anglesectionright">
+											<div class="angleuploadsection">
+												<div class="file-upload">
+													<input type="file" />
+													<img src="assets/images/angleplus.png">
+												</div>
+												<div class="deleteangle">
+													<img src="assets/images/trash.png">
+												</div>
+											</div>
+										</div>
+									</div>
+								</ng-template>
+								
+							</owl-carousel-o>
+							
+						</div>
+						
+						
+						
+						
 						<div class="invalid-feedback">
 							<div *ngIf="form.controls.images|hasError:'required'">
 								{{ 'ERROR_FORM_REQUIRED'|translate }}

@@ -1,6 +1,8 @@
-import { Component, forwardRef, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, forwardRef, OnDestroy, OnInit } from '@angular/core';
+import { OwlCarouselOConfig } from 'ngx-owl-carousel-o/lib/carousel/owl-carousel-o-config';
 import { AccountApi } from '../../../../api/base';
-import { combineLatest, Observable, of, Subject } from 'rxjs';
+import { timer, combineLatest, Observable, of, Subject } from 'rxjs';
+import { LanguageService } from '../../../language/services/language.service';
 import { finalize, map, switchMap, takeUntil } from 'rxjs/operators';
 import { ActivatedRoute, Router } from '@angular/router';
 import {
@@ -22,6 +24,10 @@ let uniqueId = 0;
 })
 export class PageDashboardComponent implements OnInit, OnDestroy {
     private destroy$: Subject<void> = new Subject<void>();
+	showCarousel = true;
+
+    carouselOptions: Partial<OwlCarouselOConfig>;
+	
 	private readonly dataId: number = ++uniqueId;
 	form: FormGroup;
 	saveInProgress = false;
@@ -30,6 +36,8 @@ export class PageDashboardComponent implements OnInit, OnDestroy {
     }
     
 	constructor(
+		private language: LanguageService,
+        private cd: ChangeDetectorRef,
         public account: AccountApi,
         private router: Router,
         private route: ActivatedRoute,
@@ -49,6 +57,29 @@ export class PageDashboardComponent implements OnInit, OnDestroy {
 			images:  [''],
             price:     ['', Validators.required],
         });
+		this.initOptions();
+
+        // Since ngx-owl-carousel-o cannot re-initialize itself, we will do it manually when the direction changes.
+        this.language.directionChange$.pipe(
+            switchMap(() => timer(250)),
+            takeUntil(this.destroy$),
+        ).subscribe(() => {
+            this.initOptions();
+
+            this.showCarousel = false;
+            this.cd.detectChanges();
+            this.showCarousel = true;
+        });
+    }
+	initOptions(): void {
+        this.carouselOptions = {
+            items: 1,
+            dots: true,
+            loop: true,
+			nav: true,
+			navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
+            rtl: this.language.isRTL(),
+        };
     }
 
     ngOnDestroy(): void {

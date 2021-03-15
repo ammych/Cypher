@@ -4,7 +4,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // modules (third-party)
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { TranslateModule } from '@ngx-translate/core';
+
 // modules
 import { AccountRoutingModule } from './account-routing.module';
 import { SharedModule } from '../shared/shared.module';
@@ -57,6 +59,7 @@ import { PageProfileComponent } from './pages/page-profile/page-profile.componen
         FormsModule,
         ReactiveFormsModule,
         // modules (third-party)
+		CarouselModule,
         TranslateModule.forChild(),
         // modules
         AccountRoutingModule,
