@@ -243,6 +243,8 @@ const productsDef: ProductDef[] = [
         compareAtPrice: 415,
         images: [
             'assets/images/products/product-3-1.png',
+			'assets/images/products/product-7-1.png',
+			'assets/images/products/product-8-1.png',
         ],
         badges: ['sale'],
         rating: 3,
@@ -263,6 +265,8 @@ const productsDef: ProductDef[] = [
         price: 2680,
         images: [
             'assets/images/products/product-4-1.png',
+			'assets/images/products/product-7-1.png',
+			'assets/images/products/product-8-1.png',
         ],
         badges: ['hot'],
         rating: 4,
@@ -325,6 +329,8 @@ const productsDef: ProductDef[] = [
         compareAtPrice: 573,
         images: [
             'assets/images/products/product-7-1.png',
+			'assets/images/products/product-7-1.png',
+			'assets/images/products/product-8-1.png',
         ],
         rating: 0,
         reviews: 0,
@@ -345,6 +351,8 @@ const productsDef: ProductDef[] = [
         price: 345,
         images: [
             'assets/images/products/product-8-1.png',
+			'assets/images/products/product-7-1.png',
+			'assets/images/products/product-8-1.png',
         ],
         rating: 3,
         reviews: 7,
@@ -406,6 +414,8 @@ const productsDef: ProductDef[] = [
         price: 60,
         images: [
             'assets/images/products/product-3-1.png',
+			'assets/images/products/product-7-1.png',
+			'assets/images/products/product-8-1.png',
         ],
         rating: 2,
         reviews: 8,
@@ -426,6 +436,8 @@ const productsDef: ProductDef[] = [
         price: 12,
         images: [
             'assets/images/products/product-4-1.png',
+			'assets/images/products/product-7-1.png',
+			'assets/images/products/product-8-1.png',
         ],
         rating: 5,
         reviews: 41,
@@ -485,6 +497,8 @@ const productsDef: ProductDef[] = [
         compareAtPrice: 8,
         images: [
             'assets/images/products/product-7-1.png',
+			'assets/images/products/product-7-1.png',
+			'assets/images/products/product-8-1.png',
         ],
         rating: 4,
         reviews: 31,
@@ -505,6 +519,8 @@ const productsDef: ProductDef[] = [
         price: 78,
         images: [
             'assets/images/products/product-8-1.png',
+			'assets/images/products/product-7-1.png',
+			'assets/images/products/product-8-1.png',
         ],
         rating: 3,
         reviews: 4,
@@ -567,6 +583,8 @@ const productsDef: ProductDef[] = [
         compareAtPrice: 31,
         images: [
             'assets/images/products/product-3-1.png',
+			'assets/images/products/product-7-1.png',
+			'assets/images/products/product-8-1.png',
         ],
         badges: ['sale'],
         rating: 3,
@@ -589,6 +607,8 @@ const productsDef: ProductDef[] = [
         compareAtPrice: 174,
         images: [
             'assets/images/products/product-4-1.png',
+			'assets/images/products/product-7-1.png',
+			'assets/images/products/product-8-1.png',
         ],
         rating: 5,
         reviews: 7,
@@ -649,6 +669,8 @@ const productsDef: ProductDef[] = [
         price: 569,
         images: [
             'assets/images/products/product-7-1.png',
+			'assets/images/products/product-7-1.png',
+			'assets/images/products/product-8-1.png',
         ],
         rating: 3,
         reviews: 9,
