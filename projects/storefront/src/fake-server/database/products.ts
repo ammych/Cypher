@@ -227,9 +227,7 @@ const productsDef: ProductDef[] = [
         reviews: 22,
         availability: 'in-stock',
         compatibility: [1],
-        attributes: {
-            Size: 'Silver',
-        },
+        
     },
     {
         name: 'Air Jordan 4 Retro “Doernbecher”',
