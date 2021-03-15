@@ -200,8 +200,9 @@ export class ProductGalleryComponent implements OnInit, OnDestroy {
 
     initOptions(): void {
         this.carouselOptions = {
-            dots: false,
-            autoplay: false,
+            dots: true,
+            autoplay: true,
+			items: 1,
             rtl: this.language.isRTL(),
             responsive: {
                 0: {items: 1},
