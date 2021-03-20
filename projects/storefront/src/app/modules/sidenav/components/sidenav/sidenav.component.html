@@ -44,6 +44,9 @@
 						<li class="menu__item">
 							<a class="menu__link" href="#">Orders</a>
 						</li>
+						<li class="menu__item">
+							<a class="menu__link" routerLink="/account/password">Change Password</a>
+						</li>
 						<li class="menu__item" *ngIf="account.user">
 							<a class="menu__link" (click)="logout()">Logout</a>
 						</li>

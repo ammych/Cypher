@@ -218,6 +218,7 @@
                         formControlName="aadharnumber"
                         class="form-control"
                         [class.is-invalid]="form.controls.aadharnumber|isInvalid"
+						readonly
                     >
                     <div class="invalid-feedback">
                         <div *ngIf="form.controls.aadharnumber|hasError:'required'">

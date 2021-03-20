@@ -6,6 +6,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // modules (third-party)
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { TranslateModule } from '@ngx-translate/core';
+import { PopoverModule } from 'ngx-bootstrap/popover';
+
 
 // modules
 import { AccountRoutingModule } from './account-routing.module';
@@ -64,6 +66,7 @@ import { PageProfileComponent } from './pages/page-profile/page-profile.componen
         // modules
         AccountRoutingModule,
         SharedModule,
-    ],
+		PopoverModule,
+	],
 })
 export class AccountModule { }
