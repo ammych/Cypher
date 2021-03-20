@@ -154,6 +154,8 @@
   "INPUT_COLORWAY_LABEL": "Colorway",
   "INPUT_SIZE_LABEL": "Size (UK)",
   "INPUT_PRICE_LABEL": "Price",
+  "INPUT_ASK_PRICE_LABEL": "Ask Price",
+  "TEXT_REJECTED": "Rejected",
   "TEXT_PRICE_OPTIONAL": "Suggested: 20038 (only available for sku in our system)",
   "INPUT_BOX_CONDITION_PLACEHOLDER": "--Select--",
   "INPUT_BOX_CONDITION_LABEL": "Box Condition",
