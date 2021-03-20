@@ -10,6 +10,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { ToastrModule } from 'ngx-toastr';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { TranslateModule } from '@ngx-translate/core';
+import { PopoverModule } from 'ngx-bootstrap/popover';
 // modules
 import { AppRoutingModule } from './app-routing.module';
 import { CurrencyModule } from './modules/currency/currency.module';
@@ -47,6 +48,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
         ModalModule.forRoot(),
         ToastrModule.forRoot(),
         TooltipModule.forRoot(),
+		PopoverModule.forRoot(),
         TranslateModule.forChild(),
         // modules
         AppRoutingModule,
