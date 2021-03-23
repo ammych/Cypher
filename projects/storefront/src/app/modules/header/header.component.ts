@@ -62,6 +62,7 @@ export class HeaderComponent implements OnInit {
     closeSearch(): void {
         this.searchIsOpen = false;
     }
+	
 	@HostListener('window:scroll', ['$event'])
 		onWindowScroll(e)
 		{

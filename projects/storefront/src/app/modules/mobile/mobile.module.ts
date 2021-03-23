@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 // modules
 import { SharedModule } from '../shared/shared.module';
+import { CollapseModule } from '../collapse';
 
 // components
 import { MobileHeaderComponent } from './components/mobile-header/mobile-header.component';
@@ -42,6 +43,7 @@ import { MobileLogoComponent } from './components/mobile-logo/mobile-logo.compon
         TranslateModule.forChild(),
         // modules
         SharedModule,
+		CollapseModule,
     ],
 })
 export class MobileModule { }

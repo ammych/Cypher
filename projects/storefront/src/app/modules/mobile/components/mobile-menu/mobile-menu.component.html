@@ -1,7 +1,7 @@
 <div class="mobile-menu__backdrop" (click)="menu.close()"></div>
 <div class="mobile-menu__body" #body>
     <button class="mobile-menu__close" type="button" (click)="menu.close()">
-        <app-icon icon="cross-12"></app-icon>
+        <img src="assets/images/cross.png">
     </button>
 
     <div class="mobile-menu__conveyor" [style.transform]="'translateX(-' + currentLevel * 100 + '%)'" #conveyor>
