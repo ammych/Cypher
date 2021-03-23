@@ -11,6 +11,9 @@ import { ToastrModule } from 'ngx-toastr';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { TranslateModule } from '@ngx-translate/core';
 import { PopoverModule } from 'ngx-bootstrap/popover';
+
+
+
 // modules
 import { AppRoutingModule } from './app-routing.module';
 import { CurrencyModule } from './modules/currency/currency.module';
