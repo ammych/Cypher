@@ -5,6 +5,7 @@ export interface BlockCatproductsColumnsItem {
     title: string;
     products: Product[];
 	bannerimg: string;
+	mobilebannerimg: string;
 }
 
 @Component({
