@@ -4,9 +4,8 @@
 ></app-block-header>
 
 <div class="shopbanner">
-	<div class="container">
-		<img src="assets/images/categories/sneakers.jpg">
-	</div>
+	<img src="assets/images/categories/sneakers.jpg"  class="desktopbanner">
+	<img src="assets/images/categories/sneakersmobile.jpg" class="mobilebanner">
 </div>
 
 
@@ -18,7 +17,7 @@
     <ng-container *ngIf="offCanvasSidebar === 'always'">
         <ng-container *ngTemplateOutlet="sidebar"></ng-container>
     </ng-container>
-    <div class="container">
+    
         <div class="block-split__row row no-gutters">
             <ng-container *ngIf="sidebarPosition === 'start' && hasSidebar">
                 <div class="block-split__item block-split__item-sidebar col-auto">
@@ -40,7 +39,7 @@
                 </div>
             </ng-container>
         </div>
-    </div>
+    
 </div>
 
 <app-block-space layout="before-footer"></app-block-space>
