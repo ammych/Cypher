@@ -10,7 +10,7 @@ import { Order } from '../../interfaces/order';
 import {
     accountChangePassword,
     accountEditProfile,
-    accountSignIn,
+	accountSignIn,
     accountSignOut,
     accountSignUp,
     addAddress,
@@ -73,6 +73,7 @@ export class FakeAccountApi extends AccountApi {
         );
     }
 
+	
     changePassword(oldPassword: string, newPassword: string): Observable<void> {
         return accountChangePassword(oldPassword, newPassword);
     }

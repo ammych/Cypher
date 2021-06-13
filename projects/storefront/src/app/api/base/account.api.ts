@@ -13,17 +13,8 @@ export interface EditProfileData {
 	country: string;
     email: string;
     phone: string;
-	selleraddress: string;
-	sellerstate: string;
-	sellerzipcode: string;
-	sellercountry: string;
-	selleremail: string;
-    sellerphone: string;
-	bankaccountholdername: string;
-	bankaccountnumber: string;
-	ifsccode: string;
-	aadharnumber: string;
 }
+
 
 export interface GetOrdersListOptions {
     page?: number;
@@ -47,8 +38,8 @@ export abstract class AccountApi {
     abstract signOut(): Observable<void>;
 
     abstract editProfile(data: EditProfileData): Observable<User>;
-
-    abstract changePassword(oldPassword: string, newPassword: string): Observable<void>;
+	
+	abstract changePassword(oldPassword: string, newPassword: string): Observable<void>;
 
     abstract addAddress(data: EditAddressData): Observable<Address>;
 
